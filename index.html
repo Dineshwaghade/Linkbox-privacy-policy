@@ -82,7 +82,7 @@
 <body>
 <div class="wrap">
   <h1>Privacy Policy - Linkbox : Quick link saver</h1>
-  <p class="updated">Last updated: September 5, 2026</p>
+  <p class="updated">Last updated: October 11, 2026</p>
 
   <p>
     Linkbox ("the app", "we", "our") is a local-first Android app for saving and organizing
@@ -92,8 +92,9 @@
   <div class="card">
     <strong>The short version:</strong> Linkbox does not require an account, does not
     collect or transmit your saved links to any server, and stores your entire library
-    only on your own device. The only external data collection comes from the AdMob
-    advertising SDK used to show ads in the app.
+    only on your own device. External data collection is limited to two Google services:
+    the AdMob advertising SDK, which shows ads in the app, and Firebase Crashlytics, which
+    reports crashes so we can fix them. Neither ever receives your saved links.
   </div>
 
   <h2>1. Data we do NOT collect</h2>
@@ -129,28 +130,76 @@
     device's Settings → Privacy → Ads.
   </p>
 
-  <h2>3. Permissions the app uses</h2>
+  <h2>3. Crash reporting (Firebase Crashlytics)</h2>
+  <p>
+    Linkbox uses Google Firebase Crashlytics to automatically report crashes, so that bugs
+    can be found and fixed without you having to report them. When the app crashes, the
+    following is sent to Google:
+  </p>
   <ul>
-    <li><strong>Internet access</strong> — used to fetch a saved page's title/favicon, and to load ads.</li>
+    <li>A stack trace — a technical description of where in the app's code the crash occurred</li>
+    <li>Device model, manufacturer and operating system version</li>
+    <li>Device state at the moment of the crash, such as available memory and storage,
+        and whether the device is rooted</li>
+    <li>The app version and the time of the crash</li>
+    <li>A Firebase installation ID — a resettable identifier for this installation of the
+        app. It does not identify you personally and is not linked to any account.</li>
+  </ul>
+  <p>
+    Crashlytics also records basic session information — when the app is opened and closed —
+    which Google uses to calculate what proportion of sessions are crash-free. This is sent
+    during normal use, not only when a crash occurs.
+  </p>
+
+  <div class="card">
+    <strong>Crash reports never contain your links.</strong> No URL, title, note or
+    category you have saved is included in a crash report, in its metadata, or in any log
+    attached to it. The app is deliberately built so that saved content can never reach a
+    crash report.
+  </div>
+
+  <p>
+    Crash and session data is processed by Google as described in the
+    <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy and Security documentation</a>
+    and the
+    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.
+    Google retains Crashlytics data according to Firebase's published retention schedule.
+    Uninstalling the app or clearing its data resets the Firebase installation ID, so any
+    future reports are no longer associated with the previous one.
+  </p>
+  <p>
+    Crash reporting is currently always on while the app is installed; there is no in-app
+    switch to disable it. If you do not wish to send crash data, you can uninstall the app.
+  </p>
+
+  <h2>4. Permissions the app uses</h2>
+  <ul>
+    <li><strong>Internet access</strong> — used to fetch a saved page's title/favicon, to load ads, and to send crash reports.</li>
     <li><strong>Network state</strong> — used to check connectivity before attempting network requests.</li>
   </ul>
   <p>Linkbox does not request access to your contacts, camera, microphone, location, or storage beyond the file picker used for backups.</p>
 
-  <h2>4. Children's privacy</h2>
+  <h2>5. Children's privacy</h2>
   <p>
     Linkbox is not directed at children under 13 and we do not knowingly collect
     information from children. If you believe a child has provided information through
     the app, please contact us using the details below so we can address it.
   </p>
 
-  <h2>5. Data retention and deletion</h2>
+  <h2>6. Data retention and deletion</h2>
   <p>
-    Since your data is stored only on your device, you are always in full control of it.
-    Deleting the app, or clearing its data from Android Settings, permanently removes
-    everything Linkbox has stored, including your saved links and preferences.
+    Your saved links, categories and preferences are stored only on your device, so you are
+    always in full control of them. Deleting the app, or clearing its data from Android
+    Settings, permanently removes everything Linkbox has stored on the device.
+  </p>
+  <p>
+    Crash reports and advertising data already sent to Google are held on Google's systems
+    and are retained and deleted according to Google's own policies, linked in sections 2
+    and 3 above. Because these contain no account information and none of your saved
+    content, they cannot be traced back to you individually.
   </p>
 
-  <h2>6. Changes to this policy</h2>
+  <h2>7. Changes to this policy</h2>
   <p>
     We may update this policy from time to time to reflect changes in the app or in
     applicable law. The "Last updated" date at the top of this page will reflect the most
@@ -158,7 +207,7 @@
     current version — no app update is required for policy changes to take effect.
   </p>
 
-  <h2>7. Contact</h2>
+  <h2>8. Contact</h2>
   <p>
     If you have questions about this privacy policy or how your data is handled, contact
     us at:
